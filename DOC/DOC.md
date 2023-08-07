@@ -58,4 +58,4 @@ This is the official Documentation of the Singularity Machine learning framework
 
   (List) ```CATEGORIES``` is a list with the names of the folders containing the images.
 
-  (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped.
+  (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to.
