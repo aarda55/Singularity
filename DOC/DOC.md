@@ -15,7 +15,7 @@ This is the official Documentation of the Singularity Machine learning framework
 
   (Array) ```Out_shape``` is the shape the output should be when forward propagation was passed.
 
-# Augmentation (to increace dataset size) - only for image datasets
+# Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
   augmentor(DATADIR, CATEGORIES, FLIP, NOISE, ROTATE)
