@@ -15,6 +15,36 @@ This is the official Documentation of the Singularity Machine learning framework
 
   (Array) ```Out_shape``` is the shape the output should be when forward propagation was passed.
 
+-------------------------------------------------------------------------------------
+
+# Evaluate (With trained network) - return respective labels
+
+``` python
+Evaluate(X)
+```
+
+(Array) ```X``` is the unlabeled data that is given the Network
+
+-------------------------------------------------------------------------------------
+
+# Training
+
+``` python
+train(X_train, y_train, learning_rate, epochs, batch_size)
+```
+
+(Array) ```X_train``` is the data on which the network will be trained on
+
+(Array) ```y_train``` are the labels corresponding to the data.
+
+(Float) ```learning_rate``` if none then default set to 0.01.
+
+(Integer) ```epochs``` are iterations of training the network goes through.
+
+(Integer) ```batch_size``` is the batch that is being used from the whole training pool for each of the ```epochs```.
+
+-------------------------------------------------------------------------------------
+
 # Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
@@ -38,6 +68,8 @@ This is the official Documentation of the Singularity Machine learning framework
   (Boolean) ```NOISEE```, when activated adds Noise to every image and saves it in the same directory.
 
   (Boolean) ```ROTATE```, when activated rotates every image and saves it in the same directory.
+
+-------------------------------------------------------------------------------------
 
 # Image preprocessing (to convert images in arrays) - only for image datasets
 
