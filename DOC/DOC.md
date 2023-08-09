@@ -1,9 +1,9 @@
 # Documentation
-This is the official Documentation of the Singularity Machine learning framework
+This is the official documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Input layer (Universal Input layer) - always first layer
+# Input layer (Universal input layer) - always first layer
 
   ``` python
   Input_layer(Input_data, Input_shape, Out_shape)
@@ -17,7 +17,7 @@ This is the official Documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Adding Fully-connected layers
+# Adding fully-connected layers
 
 ``` python
 add_layer(neurons, activation_function)
