@@ -3,7 +3,7 @@ This is the official Documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# First/Input layer (Universal Input layer)
+# Input layer (Universal Input layer) - always first layer
 
   ``` python
   Input_layer(Input_data, Input_shape, Out_shape)
@@ -17,13 +17,15 @@ This is the official Documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Evaluate (With trained network) - return respective labels
+# Adding Fully-connected layers
 
 ``` python
-Evaluate(X)
+add_layer(neurons, activation_function)
 ```
 
-(Array) ```X``` is the unlabeled data that is given the Network
+(Integer) ```neurons``` are the number of neurons the layer is going to have.
+
+(activation_function) ```activation_function``` are the activation functions that are used in that layer (e.g. ReLU, GeLU).
 
 -------------------------------------------------------------------------------------
 
@@ -42,6 +44,18 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 (Integer) ```epochs``` are iterations of training the network goes through.
 
 (Integer) ```batch_size``` is the batch that is being used from the whole training pool for each of the ```epochs```.
+
+-------------------------------------------------------------------------------------
+
+# Evaluate (With trained network) - returns the accuracy of the network
+
+``` python
+Evaluate(X_test, y_test)
+```
+
+(Array) ```X_test``` is the data that is given the Network for test purposes.
+
+(Array) ```y_test``` are the labels, which need to be one-hot encoded.
 
 -------------------------------------------------------------------------------------
 
