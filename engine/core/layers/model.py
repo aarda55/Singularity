@@ -94,7 +94,7 @@ class model:
                     # Updated parameters
                     layer['weights'] -= learning_rate * d_weights
                     layer['biases'] -= learning_rate * d_biases
-            print(f"Singularity: Training:{epoch}/{epochs} - {epoch/epochs*100}%")
+            print(f"Singularity: Training:{epoch+1}/{epochs} - {(epoch+1)/epochs*100}%")
 
 
     def predict(self, X, Argmax=None):
