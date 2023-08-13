@@ -3,7 +3,7 @@ This is the official documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Input layer (Universal input layer) - always first layer
+# Input layer (Universal input layer)
 
   ``` python
   Input_layer(Input_data, Input_shape, Out_shape)
@@ -75,7 +75,7 @@ Evaluate(X_test, y_test)
       └── cat_example.png
   ```
 
-  (List) ```CATEGORIES``` is a list with the names of the folders containing the images.
+  (List) ```CATEGORIES``` is a list with the names of the folders containing the images (e.g. ```Dog```, ```Cat```).
 
   (Boolean) ```FLIP```, when activated flips every image and saves it in the same directory.
 
@@ -102,6 +102,6 @@ Evaluate(X_test, y_test)
       └── cat_example.png
   ```
 
-  (List) ```CATEGORIES``` is a list with the names of the folders containing the images.
+  (List) ```CATEGORIES``` is a list with the names of the folders containing the images (e.g. ```Dog```, ```Cat```).
 
   (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to.
