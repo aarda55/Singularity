@@ -3,7 +3,7 @@ This is the official documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Input layer (Universal input layer)
+## Input layer (Universal input layer)
 
   ``` python
   Input_layer(Input_data, Input_shape, Out_shape)
@@ -17,7 +17,7 @@ This is the official documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-# Adding fully-connected layers
+## Adding fully-connected layers
 
 ``` python
 add_layer(neurons, activation_function)
@@ -29,7 +29,7 @@ add_layer(neurons, activation_function)
 
 -------------------------------------------------------------------------------------
 
-# Training
+## Training
 
 ``` python
 train(X_train, y_train, learning_rate, epochs, batch_size)
@@ -47,7 +47,7 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 
 -------------------------------------------------------------------------------------
 
-# Evaluate (With trained network) - returns the accuracy of the network
+## Evaluate (With trained network) - returns the accuracy of the network
 
 ``` python
 Evaluate(X_test, y_test)
@@ -59,7 +59,7 @@ Evaluate(X_test, y_test)
 
 -------------------------------------------------------------------------------------
 
-# Augmentation (to increase dataset size) - only for image datasets
+## Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
   augmentor(DATADIR, CATEGORIES, FLIP, NOISE, ROTATE)
@@ -85,7 +85,7 @@ Evaluate(X_test, y_test)
 
 -------------------------------------------------------------------------------------
 
-# Image preprocessing (to convert images in arrays) - only for image datasets
+## Image preprocessing (to convert images in arrays) - only for image datasets
 
   ``` python
   img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE)
@@ -105,3 +105,13 @@ Evaluate(X_test, y_test)
   (List) ```CATEGORIES``` is a list with the names of the folders containing the images (e.g. ```Dog```, ```Cat```).
 
   (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to.
+
+-------------------------------------------------------------------------------------
+
+## Tokenizer - only for strings
+
+``` python
+tokenizer(Input_string)
+```
+
+(String) ```Input_string``` is the list which should be tokenized and vectorized according to the word array's indicies.
