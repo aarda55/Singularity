@@ -59,6 +59,16 @@ Evaluate(X_test, y_test)
 
 -------------------------------------------------------------------------------------
 
+## Saving the trained model
+
+``` python
+savem(path)
+```
+
+(String) ```path``` defines the path where the pickle file containing the model data should be saved.
+
+-------------------------------------------------------------------------------------
+
 ## Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
