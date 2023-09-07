@@ -69,6 +69,20 @@ savem(path)
 
 -------------------------------------------------------------------------------------
 
+## Loading in a saved model
+
+``` python
+loadm(path)
+```
+
+(String) ```path``` is the place where the pickle model file is stored.
+
+Extra tips:
+
+Instead of defining ```your_model_name = Model()``` you need to define ``` your_model_name = Model.loadm(your_path)```
+
+-------------------------------------------------------------------------------------
+
 ## Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
