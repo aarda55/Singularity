@@ -143,7 +143,7 @@ class model:
         return print(f"Singularity: Model-accuracy: {accuracy:.3%}")
 
     @classmethod
-    def load_model(cls, path):
+    def loadm(cls, path):
         with open(path, 'rb') as file:
             model_data = pickle.load(file)
         loaded_model = cls()
