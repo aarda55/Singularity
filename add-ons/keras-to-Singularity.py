@@ -1,7 +1,7 @@
 from engine.core.layers.model import Model
 from tensorflow import keras
 
-def convert_keras_to_custom_model(keras_model):
+def keras_to_Singularity(keras_model):
     
     sing_model = Model()
 
