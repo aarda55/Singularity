@@ -6,7 +6,7 @@ This is the official documentation of the Singularity Machine learning framework
 ## Input layer (Universal input layer)
 
   ``` python
-  Input_layer(Input_data, Input_shape, Out_shape)
+  input_layer(Input_data, Input_shape, Out_shape)
   ```
   
   (Array/List)   ```Input_data``` is the training/validation data that is being passed. From there the input shape is also derived. Every array/list should have the        same shape.
@@ -50,7 +50,7 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 ## Evaluate (With trained network) - returns the accuracy of the network
 
 ``` python
-Evaluate(X_test, y_test)
+evaluate(X_test, y_test)
 ```
 
 (Array) ```X_test``` is the data that is given the Network for test purposes.
@@ -139,3 +139,25 @@ tokenizer(Input_string)
 ```
 
 (String) ```Input_string``` is the list which should be tokenized and vectorized according to the word array's indicies.
+
+-------------------------------------------------------------------------------------
+
+## Model Converter - Keras -> Singularity
+
+```python
+keras_to_Singularity(keras_model)
+```
+
+(String ) ```keras_model``` is the keras model that is loaded in by the keras library itself.
+
+-------------------------------------------------------------------------------------
+
+## Model Converter - Pytorch -> Singularity
+
+```python
+pytorch_to_Singularity(pytorch_model)
+```
+
+(String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
+
+-------------------------------------------------------------------------------------
