@@ -34,7 +34,7 @@ class model:
         self.layers[-1]['weights'] = np.random.randn(prev_l_size, output_size)
         self.layers[-1]['biases'] = np.zeros((1, output_size))
 
-    def Input_layer(self, Input_data, Input_shape, Out_shape):
+    def input_layer(self, Input_data, Input_shape, Out_shape):
 
         # Input values are checked if they are an array or a list
         if isinstance(Input_data, np.ndarray) or (isinstance(Input_data, list) and len(Input_data) > 0):
@@ -128,7 +128,7 @@ class model:
     """
     Evaluates the already trained network
     """
-    def Evaluate(self, X_test, y_test):
+    def evaluate(self, X_test, y_test):
 
         if(self.one_hot_test(y_test) == False):
             return print("Singularity: Value-error: y_test needs to be one-hot-encoded for usage of this function!")
