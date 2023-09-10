@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 from engine.core.layers.Model import Model
 
-def convert_pytorch_to_custom_model(pytorch_model):
+def pytorch_to_Singularity(pytorch_model):
     Sing_model = Model()
     
     input_size = None
