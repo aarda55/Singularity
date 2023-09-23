@@ -142,6 +142,16 @@ tokenizer(Input_string)
 
 -------------------------------------------------------------------------------------
 
+## Normalization - for image data
+
+``` python
+norm(X)
+```
+
+(Array) ```X``` is the data that should be normalized from 0-255 to 0-1.
+
+-------------------------------------------------------------------------------------
+
 ## Model Converter - Keras -> Singularity
 
 ```python
