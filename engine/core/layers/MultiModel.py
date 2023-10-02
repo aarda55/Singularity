@@ -4,7 +4,7 @@ import Model
 
 class MultiModel:
     def __init__(self, models):
-        self.models = models  # List of pre-trained models
+        self.models = models 
 
     def predict_multi(self, X):
         outputs = []
