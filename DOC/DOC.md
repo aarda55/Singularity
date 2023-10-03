@@ -7,7 +7,8 @@
 ### Content includes:
 
 1. [Single model functions](#singlemodel)
-
+2. [auxiliary functions](#auxiliary)
+3. [cross framework functions](#cross)
 
 -------------------------------------------------------------------------------------
 
@@ -37,7 +38,7 @@ add_layer(neurons, activation_function)
 
 -------------------------------------------------------------------------------------
 
-#### Training
+#### Training <a name="singlemodel"></a>
 
 ``` python
 train(X_train, y_train, learning_rate, epochs, batch_size)
@@ -55,7 +56,7 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 
 -------------------------------------------------------------------------------------
 
-#### Evaluate (With trained network) - returns the accuracy of the network
+#### Evaluate (With trained network) - returns the accuracy of the network <a name="singlemodel"></a>
 
 ``` python
 evaluate(X_test, y_test)
@@ -67,7 +68,7 @@ evaluate(X_test, y_test)
 
 -------------------------------------------------------------------------------------
 
-#### Saving the trained model
+#### Saving the trained model <a name="singlemodel"></a>
 
 ``` python
 savem(path)
@@ -77,7 +78,7 @@ savem(path)
 
 -------------------------------------------------------------------------------------
 
-#### Loading in a saved model
+#### Loading in a saved model <a name="singlemodel"></a>
 
 ``` python
 loadm(path)
@@ -91,7 +92,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-#### Augmentation (to increase dataset size) - only for image datasets
+#### Augmentation (to increase dataset size) - only for image datasets <a name="auxiliary"></a>
 
   ``` python
   augmentor(DATADIR, CATEGORIES, FLIP, NOISE, ROTATE)
@@ -117,7 +118,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-#### Image preprocessing (to convert images in arrays) - only for image datasets
+#### Image preprocessing (to convert images in arrays) - only for image datasets <a name="auxiliary"></a>
 
   ``` python
   img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE)
@@ -140,7 +141,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-#### Tokenizer - only for strings
+#### Tokenizer - only for strings <a name="auxiliary"></a>
 
 ``` python
 tokenizer(Input_string)
@@ -150,7 +151,7 @@ tokenizer(Input_string)
 
 -------------------------------------------------------------------------------------
 
-#### Normalization - for image data
+#### Normalization - for image data <a name="auxiliary"></a>
 
 ``` python
 norm(X)
@@ -160,7 +161,7 @@ norm(X)
 
 -------------------------------------------------------------------------------------
 
-#### Model Converter - Keras -> Singularity
+#### Model Converter - Keras -> Singularity <a name="cross"></a>
 
 ```python
 keras_to_Singularity(keras_model)
@@ -169,13 +170,11 @@ keras_to_Singularity(keras_model)
 (String ) ```keras_model``` is the keras model that is loaded in by the keras library itself.
 
 -------------------------------------------------------------------------------------
-
-#### Model Converter - Pytorch -> Singularity
+  
+#### Model Converter - Pytorch -> Singularity <a name="cross"></a>
 
 ```python
 pytorch_to_Singularity(pytorch_model)
 ```
 
 (String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
-
--------------------------------------------------------------------------------------
