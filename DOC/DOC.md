@@ -1,9 +1,17 @@
 # Documentation
-This is the official documentation of the Singularity Machine learning framework
+## This is the official documentation of the Singularity Machine learning framework
+
+
+<br><br>
+
+### Content includes:
+
+1. [Single model functions](#singlemodel)
+
 
 -------------------------------------------------------------------------------------
 
-## Input layer (Universal input layer)
+#### Input layer (Universal input layer) <a name="singlemodel"></a>
 
   ``` python
   input_layer(Input_data, Input_shape, Out_shape)
@@ -17,7 +25,7 @@ This is the official documentation of the Singularity Machine learning framework
 
 -------------------------------------------------------------------------------------
 
-## Adding fully-connected layers
+#### Adding fully-connected layers <a name="singlemodel"></a>
 
 ``` python
 add_layer(neurons, activation_function)
@@ -29,7 +37,7 @@ add_layer(neurons, activation_function)
 
 -------------------------------------------------------------------------------------
 
-## Training
+#### Training
 
 ``` python
 train(X_train, y_train, learning_rate, epochs, batch_size)
@@ -47,7 +55,7 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 
 -------------------------------------------------------------------------------------
 
-## Evaluate (With trained network) - returns the accuracy of the network
+#### Evaluate (With trained network) - returns the accuracy of the network
 
 ``` python
 evaluate(X_test, y_test)
@@ -59,7 +67,7 @@ evaluate(X_test, y_test)
 
 -------------------------------------------------------------------------------------
 
-## Saving the trained model
+#### Saving the trained model
 
 ``` python
 savem(path)
@@ -69,7 +77,7 @@ savem(path)
 
 -------------------------------------------------------------------------------------
 
-## Loading in a saved model
+#### Loading in a saved model
 
 ``` python
 loadm(path)
@@ -83,7 +91,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-## Augmentation (to increase dataset size) - only for image datasets
+#### Augmentation (to increase dataset size) - only for image datasets
 
   ``` python
   augmentor(DATADIR, CATEGORIES, FLIP, NOISE, ROTATE)
@@ -109,7 +117,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-## Image preprocessing (to convert images in arrays) - only for image datasets
+#### Image preprocessing (to convert images in arrays) - only for image datasets
 
   ``` python
   img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE)
@@ -132,7 +140,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
 -------------------------------------------------------------------------------------
 
-## Tokenizer - only for strings
+#### Tokenizer - only for strings
 
 ``` python
 tokenizer(Input_string)
@@ -142,7 +150,7 @@ tokenizer(Input_string)
 
 -------------------------------------------------------------------------------------
 
-## Normalization - for image data
+#### Normalization - for image data
 
 ``` python
 norm(X)
@@ -152,7 +160,7 @@ norm(X)
 
 -------------------------------------------------------------------------------------
 
-## Model Converter - Keras -> Singularity
+#### Model Converter - Keras -> Singularity
 
 ```python
 keras_to_Singularity(keras_model)
@@ -162,7 +170,7 @@ keras_to_Singularity(keras_model)
 
 -------------------------------------------------------------------------------------
 
-## Model Converter - Pytorch -> Singularity
+#### Model Converter - Pytorch -> Singularity
 
 ```python
 pytorch_to_Singularity(pytorch_model)
