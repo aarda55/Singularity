@@ -9,6 +9,7 @@
 1. [Single model functions](#singlemodel)
 2. [auxiliary functions](#auxiliary)
 3. [cross framework functions](#cross)
+4. [MulliModel functions](#multimodel)
 
 -------------------------------------------------------------------------------------
 
@@ -178,3 +179,5 @@ pytorch_to_Singularity(pytorch_model)
 ```
 
 (String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
+
+-------------------------------------------------------------------------------------
