@@ -181,3 +181,11 @@ pytorch_to_Singularity(pytorch_model)
 (String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
 
 -------------------------------------------------------------------------------------
+
+#### predict - Multimodel
+
+``` python
+predict_multi(X):
+```
+
+(array) ```X``` is the array that should be predicted by the MultiModel
