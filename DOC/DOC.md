@@ -30,7 +30,7 @@
 #### Adding fully-connected layers <a name="singlemodel"></a>
 
 ``` python
-add_layer(neurons, activation_function)
+add_layer(Neurons, Activation_function)
 ```
 
 (Integer) ```neurons``` are the number of neurons the layer is going to have.
@@ -42,7 +42,7 @@ add_layer(neurons, activation_function)
 #### Training <a name="singlemodel"></a>
 
 ``` python
-train(X_train, y_train, learning_rate, epochs, batch_size)
+train(X_train, Y_train, Learning_rate, Epochs, Batch_size)
 ```
 
 (Array) ```X_train``` is the data on which the network will be trained on
@@ -60,7 +60,7 @@ train(X_train, y_train, learning_rate, epochs, batch_size)
 #### Evaluate (With trained network) - returns the accuracy of the network <a name="singlemodel"></a>
 
 ``` python
-evaluate(X_test, y_test)
+evaluate(X_test, Y_test)
 ```
 
 (Array) ```X_test``` is the data that is given the Network for test purposes.
@@ -72,7 +72,7 @@ evaluate(X_test, y_test)
 #### Saving the trained model <a name="singlemodel"></a>
 
 ``` python
-savem(path)
+savem(Path)
 ```
 
 (String) ```path``` defines the path where the pickle file containing the model data should be saved.
@@ -82,7 +82,7 @@ savem(path)
 #### Loading in a saved model <a name="singlemodel"></a>
 
 ``` python
-loadm(path)
+loadm(Path)
 ```
 
 (String) ```path``` is the place where the pickle model file is stored.
@@ -165,7 +165,7 @@ norm(X)
 #### Model Converter - Keras -> Singularity <a name="cross"></a>
 
 ```python
-keras_to_Singularity(keras_model)
+keras_to_Singularity(Keras_model)
 ```
 
 (String ) ```keras_model``` is the keras model that is loaded in by the keras library itself.
@@ -175,14 +175,14 @@ keras_to_Singularity(keras_model)
 #### Model Converter - Pytorch -> Singularity <a name="cross"></a>
 
 ```python
-pytorch_to_Singularity(pytorch_model)
+pytorch_to_Singularity(Pytorch_model)
 ```
 
 (String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
 
 -------------------------------------------------------------------------------------
 
-#### predict - Multimodel
+#### predict - Multimodel <a name="multimodel"></a>
 
 ``` python
 predict_multi(X):
