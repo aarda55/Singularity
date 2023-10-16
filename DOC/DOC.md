@@ -9,9 +9,13 @@
 1. [Single model functions](#singlemodel)
 2. [auxiliary functions](#auxiliary)
 3. [cross framework functions](#cross)
-4. [MulliModel functions](#multimodel)
+4. [MultiModel functions](#multimodel)
+   
+<br>
 
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Input layer (Universal input layer) <a name="singlemodel"></a>
 
@@ -23,9 +27,13 @@
 
   (Array) ```Input_shape``` is the shape the data has.
 
-  (Array) ```Out_shape``` is the shape the output should be when forward propagation was passed.
+  (Array) ```Out_shape``` is the shape the output should be when forward propagation was passed
+  
+<br>
 
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Adding fully-connected layers <a name="singlemodel"></a>
 
@@ -37,7 +45,11 @@ add_layer(Neurons, Activation_function)
 
 (activation_function) ```activation_function``` are the activation functions that are used in that layer (e.g. ReLU, GeLU).
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Training <a name="singlemodel"></a>
 
@@ -55,7 +67,11 @@ train(X_train, Y_train, Learning_rate, Epochs, Batch_size)
 
 (Integer) ```batch_size``` is the batch that is being used from the whole training pool for each of the ```epochs```.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Evaluate (With trained network) - returns the accuracy of the network <a name="singlemodel"></a>
 
@@ -67,7 +83,11 @@ evaluate(X_test, Y_test)
 
 (Array) ```y_test``` are the labels, which need to be one-hot encoded.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Saving the trained model <a name="singlemodel"></a>
 
@@ -77,7 +97,11 @@ savem(Path)
 
 (String) ```path``` defines the path where the pickle file containing the model data should be saved.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Loading in a saved model <a name="singlemodel"></a>
 
@@ -91,7 +115,11 @@ Extra tips:
 
 Instead of defining ```your_model_name = Model()``` you need to define ``` your_model_name = Model.loadm(your_path)```
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Augmentation (to increase dataset size) - only for image datasets <a name="auxiliary"></a>
 
@@ -117,7 +145,11 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
   (Boolean) ```ROTATE```, when activated rotates every image and saves it in the same directory.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Image preprocessing (to convert images in arrays) - only for image datasets <a name="auxiliary"></a>
 
@@ -140,7 +172,11 @@ Instead of defining ```your_model_name = Model()``` you need to define ``` your_
 
   (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Tokenizer - only for strings <a name="auxiliary"></a>
 
@@ -150,7 +186,11 @@ tokenizer(Input_string)
 
 (String) ```Input_string``` is the list which should be tokenized and vectorized according to the word array's indicies.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Normalization - for image data <a name="auxiliary"></a>
 
@@ -160,7 +200,11 @@ norm(X)
 
 (Array) ```X``` is the data that should be normalized from 0-255 to 0-1.
 
+<br>
+
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### Model Converter - Keras -> Singularity <a name="cross"></a>
 
@@ -168,9 +212,13 @@ norm(X)
 keras_to_Singularity(Keras_model)
 ```
 
-(String ) ```keras_model``` is the keras model that is loaded in by the keras library itself.
+(String) ```keras_model``` is the keras model that is loaded in by the keras library itself.
+
+<br>
 
 -------------------------------------------------------------------------------------
+
+<br>
   
 #### Model Converter - Pytorch -> Singularity <a name="cross"></a>
 
@@ -178,14 +226,46 @@ keras_to_Singularity(Keras_model)
 pytorch_to_Singularity(Pytorch_model)
 ```
 
-(String ) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
+(String) ```pytorch_model``` is the pytorch model that is loaded in by the pytorch library itself.
+
+<br>
 
 -------------------------------------------------------------------------------------
+
+<br>
 
 #### predict - Multimodel <a name="multimodel"></a>
 
 ``` python
-predict_multi(X):
+predict_multi(X)
 ```
 
-(array) ```X``` is the array that should be predicted by the MultiModel
+(array) ```X``` is the array that should be predicted by the MultiModel.
+
+<br>
+
+-------------------------------------------------------------------------------------
+
+<br>
+
+#### save_multi - Multimodel <a name="multimodel"></a>
+
+``` python
+save_multi(Path)
+```
+
+(String) ```Path``` is the location where the Multimodel should be saved.
+
+<br>
+
+-------------------------------------------------------------------------------------
+
+<br>
+
+#### load_multi - Multimodel <a name="multimodel"></a>
+
+``` python
+load_multi(Paths)
+```
+
+(List) ```Paths``` are the locations where the models are saved.
