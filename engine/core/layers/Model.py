@@ -22,6 +22,51 @@ class Model:
             'biases': None
         })
 
+    def add_conv_layer(self, num_filters, kernel_size, activation_function=None, input_shape=None):
+        if activation_function is None:
+            activation_function = self.ReLU
+        if input_shape is None:
+            raise ValueError("Input shape must be specified for the first convolutional layer.")
+
+        layer = {
+            'type': 'conv',
+            'num_filters': num_filters,
+            'kernel_size': kernel_size,
+            'activation_function': activation_function,
+            'input_shape': input_shape,
+            'weights': None,
+            'biases': None
+        }
+        self.layers.append(layer)
+
+        self._init_conv_layer(layer)
+
+    def _init_conv_layer(self, layer):
+        input_shape = layer['input_shape']
+        num_filters = layer['num_filters']
+        kernel_size = layer['kernel_size']
+
+        layer['weights'] = np.random.randn(num_filters, input_shape[0], kernel_size, kernel_size)
+        layer['biases'] = np.zeros((1, num_filters))
+
+    def _conv_forward(self, input_data, layer):
+        weights = layer['weights']
+        biases = layer['biases']
+        num_filters, input_channels, kernel_size, _ = weights.shape
+
+        output_shape = (num_filters, input_data.shape[-2] - kernel_size + 1, input_data.shape[-1] - kernel_size + 1)
+        output = np.zeros(output_shape)
+
+        for f in range(num_filters):
+            for c in range(input_channels):
+                for i in range(input_data.shape[-2] - kernel_size + 1):
+                    for j in range(input_data.shape[-1] - kernel_size + 1):
+                        output[f, i, j] = np.sum(input_data[c, i:i+kernel_size, j:j+kernel_size] * weights[f, c])
+
+        output += biases
+        return layer['activation_function'](output)
+
+    
     def initialize_parameters(self, input_size, output_size):
         prev_l_size = input_size
 
@@ -46,15 +91,18 @@ class Model:
     
     def _Prop(self, X):
         input_data = X
-
-        # Shape has to stay the same else a Value-error is issued
-        if X.shape != Input_shape: return print("Singularity: Value-error: Input shape of Test data has to be the same as Input shape of training data. Instead got", X.shape)
-        
-        # Goes through every layer and does the forward propagation
         for layer in self.layers:
-            layer_activation = np.dot(input_data, layer['weights']) + layer['biases']
-            layer_output = layer['activation_function'](layer_activation)
-            Output_data = layer_output
+            if layer['type'] == 'conv':
+                Output_data = self._conv_forward(input_data, layer)
+            else:
+            # Shape has to stay the same else a Value-error is issued
+            if X.shape != Input_shape: return print("Singularity: Value-error: Input shape of Test data has to be the same as Input shape of training data. Instead got", X.shape)
+            
+            # Goes through every layer and does the forward propagation
+            for layer in self.layers:
+                layer_activation = np.dot(input_data, layer['weights']) + layer['biases']
+                layer_output = layer['activation_function'](layer_activation)
+                Output_data = layer_output
 
         return Output_data
 
