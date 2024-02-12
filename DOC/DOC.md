@@ -61,7 +61,7 @@ train(X_train, Y_train, Learning_rate, Epochs, Batch_size)
 
 (Array) ```y_train``` are the labels corresponding to the data.
 
-(Float) ```learning_rate``` if none then default set to 0.01.
+(Float) ```learning_rate``` speed of gradient descent (if none then default set to 0.01).
 
 (Integer) ```epochs``` are iterations of training the network goes through.
 
