@@ -2,6 +2,9 @@ import Model
 from tensorflow import keras
 
 def convert_keras_to_custom_model(keras_model):
+
+    if(keras not in sys.modules):
+        return ("Package-error: Please install and import tensorflow/keras")
     
     sing_model = Model()
 
