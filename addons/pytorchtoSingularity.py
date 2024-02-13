@@ -5,6 +5,10 @@ import torch.nn as nn
 from engine.core.layers.Model import Model
 
 def convert_pytorch_to_custom_model(pytorch_model):
+
+    if(torch not in sys.modules):
+        return ("Package-error: Please install and import pytorch")
+    
     Sing_model = Model()
     
     input_size = None
