@@ -9,7 +9,6 @@
 1. [Single model functions](#singlemodel)
 2. [auxiliary functions](#auxiliary)
 3. [cross framework functions](#cross)
-4. [MultiModel functions](#multimodel)
    
 <br>
 
@@ -170,7 +169,7 @@ Instead of defining ```your_model_name = Model()``` you need to define ```your_m
 
   (List) ```CATEGORIES``` is a list with the names of the folders containing the images (e.g. ```Dog```, ```Cat```).
 
-  (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to.
+  (Integer) ```IMG_SIZE``` defines the size which all images are automatically reshaped to (35 If none).
 
 <br>
 
