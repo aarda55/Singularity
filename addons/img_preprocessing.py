@@ -5,6 +5,8 @@ import numpy as np
 
 
 def img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE):
+    if(IMG_SIZE is none): IMG_SIZE = 35
+    
     training_data = []
 
     #formats data
