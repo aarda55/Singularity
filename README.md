@@ -11,7 +11,7 @@ See documentation here: [DOC](DOC/DOC.md)
 
 ## Usage:
 
-```pip instal Singularity```
+```pip install Singularity```
 
 ------------------------------------------------------------------------
 
