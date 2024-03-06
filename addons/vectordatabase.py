@@ -61,3 +61,13 @@ class Vectordb:
         }
         with open(filename, 'w') as file:
             json.dump(data, file)
+
+    @classmethod
+    def load_from_json(cls, filename):
+        with open(filename, 'r') as file:
+            data = json.load(file)
+        instance = cls()
+        instance.word_index = data['word_index']
+        instance.idf = np.array(data['idf'])
+        instance.n_dimensions = len(instance.idf)
+        return instance
