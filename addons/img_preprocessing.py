@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 
 
-def img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE=35):
+def img_preprocessing(DATADIR, CATEGORIES, IMG_SIZE=80):
     
     training_data = []
 
