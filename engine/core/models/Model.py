@@ -5,6 +5,7 @@ class Model:
     def __init__(self):
         self.layers = []
 
+    @staticmethod
     def _one_hot_test(y_tests):
         for y_test in y_tests:
             if np.sum(y_test) != 1:
@@ -42,13 +43,13 @@ class Model:
             Input_shape = Input_data.shape
             return Input_data, Input_shape, Out_shape
         else:
-            print("Singularity: Type-error: Object being passed has to either be a python list or a numpy array!")
+            raise TypeError("Singularity: Type-error: Object being passed has to either be a python list or a numpy array!")
     
     def _Prop(self, X):
         input_data = X
 
         # Shape has to stay the same else a Value-error is issued
-        if X.shape != Input_shape: return print("Singularity: Value-error: Input shape of Test data has to be the same as Input shape of training data. Instead got", X.shape)
+        if X.shape != self.Input_shape: return print("Singularity: Value-error: Input shape of Test data has to be the same as Input shape of training data. Instead got", X.shape)
         
         # Goes through every layer and does the forward propagation
         for layer in self.layers:
